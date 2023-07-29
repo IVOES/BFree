@@ -1,0 +1,113 @@
+software/applications-and-benchmarks/benchmarks/C-code/main.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 13 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:455:5: warning: %lu in format string (no. 1) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+    printf("%lu \n", fibonacci(result));
+    ^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:481:5: warning: %lu in format string (no. 1) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+    printf("%lu \n", fibonacci(result));
+    ^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:509:5: warning: %lu in format string (no. 1) requires 'unsigned long' but the argument type is 'unsigned int'. [invalidPrintfArgType_uint]
+    printf("%lu \n", fibonacci(result));
+    ^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:230:28: style: The scope of the variable 'double_extension_filenames' can be reduced. [variableScope]
+        static const char *double_extension_filenames[] = STRING_LIST("code.txt.py", "code.py.txt", "code.txt.txt","code.py.py",
+                           ^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:422:11: style: Checking if unsigned expression 'n' is less than zero. [unsignedLessThanZero]
+    if (n < 0)
+          ^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:216:21: style: Local variable 'result' shadows outer variable [shadowVariable]
+    pyexec_result_t result;
+                    ^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:438:19: note: Shadowed declaration
+volatile uint32_t result = 0;
+                  ^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:216:21: note: Shadow variable
+    pyexec_result_t result;
+                    ^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:324:0: information: Skipping configuration 'CIRCUITPY_BOOT_OUTPUT_FILE' since the value of 'CIRCUITPY_BOOT_OUTPUT_FILE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        if (!have_boot_py && f_open(fs, boot_output_file, CIRCUITPY_BOOT_OUTPUT_FILE, FA_READ) == FR_OK) {
+^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:343:0: information: Skipping configuration 'CIRCUITPY_BOOT_OUTPUT_FILE' since the value of 'CIRCUITPY_BOOT_OUTPUT_FILE' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            f_open(fs, boot_output_file, CIRCUITPY_BOOT_OUTPUT_FILE, FA_WRITE | FA_CREATE_ALWAYS);
+^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:261:0: information: Skipping configuration 'MICROPY_VM_HOOK_LOOP' since the value of 'MICROPY_VM_HOOK_LOOP' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            MICROPY_VM_HOOK_LOOP
+^
+software/nvm-controller/src/checkpoint_ctrl.c:220:9: warning: %ld in format string (no. 1) requires 'long' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+        printf("Restore segment, wrong size. Got %ld expected %ld\r\n",
+        ^
+software/nvm-controller/src/checkpoint_ctrl.c:220:9: warning: %ld in format string (no. 2) requires 'long' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+        printf("Restore segment, wrong size. Got %ld expected %ld\r\n",
+        ^
+software/nvm-controller/src/printf.c:56:10: style: The scope of the variable 'c' can be reduced. [variableScope]
+    char c;
+         ^
+software/nvm-controller/src/printf.c:57:19: style: The scope of the variable 'd' can be reduced. [variableScope]
+    unsigned long d;
+                  ^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:132:0: style: The function 'EUSCI_B_SPI_changeClockPhasePolarity' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:96:0: style: The function 'EUSCI_B_SPI_changeMasterClock' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:197:0: style: The function 'EUSCI_B_SPI_disable' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:170:0: style: The function 'EUSCI_B_SPI_disableInterrupt' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:163:0: style: The function 'EUSCI_B_SPI_enableInterrupt' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:177:0: style: The function 'EUSCI_B_SPI_getInterruptStatus' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:203:0: style: The function 'EUSCI_B_SPI_getReceiveBufferAddress' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:208:0: style: The function 'EUSCI_B_SPI_getTransmitBufferAddress' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:52:0: style: The function 'EUSCI_B_SPI_initMaster' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:213:0: style: The function 'EUSCI_B_SPI_isBusy' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:158:0: style: The function 'EUSCI_B_SPI_receiveData' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:88:0: style: The function 'EUSCI_B_SPI_select4PinFunctionality' is never used. [unusedFunction]
+
+^
+software/nvm-controller/MSP430FR5xx_6xx/eusci_b_spi.c:151:0: style: The function 'EUSCI_B_SPI_transmitData' is never used. [unusedFunction]
+
+^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:656:0: style: The function '__assert_func' is never used. [unusedFunction]
+
+^
+software/nvm-controller/src/checkpoint.c:68:0: style: The function 'checkpoint_table_clear_restore' is never used. [unusedFunction]
+
+^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:75:0: style: The function 'do_str' is never used. [unusedFunction]
+
+^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:625:0: style: The function 'gc_collect' is never used. [unusedFunction]
+
+^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:645:0: style: The function 'nlr_jump_fail' is never used. [unusedFunction]
+
+^
+software/nvm-controller/src/checkpoint_ctrl.c:23:0: style: The function 'process_reboot_sync' is never used. [unusedFunction]
+
+^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:298:0: style: The function 'run_boot_py' is never used. [unusedFunction]
+
+^
+software/applications-and-benchmarks/benchmarks/C-code/main.c:467:0: style: The function 'strlen_test' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
